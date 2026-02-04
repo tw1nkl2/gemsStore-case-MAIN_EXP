@@ -19,6 +19,7 @@ This repository is a **public case study** (README + screenshots). The productio
 ---
 
 ## Tech stack (confirmed)
+
 ### Frontend
 - Next.js **15.4.3** (App Router), React **18.3.1**, TypeScript
 - Tailwind CSS, Framer Motion, Swiper, next-intl
@@ -27,7 +28,7 @@ This repository is a **public case study** (README + screenshots). The productio
 ### Backend
 - Django **6.0**, Django REST Framework **3.16.1**
 - Simple JWT, django-filter, django-cors-headers
-- django-storages + boto3 (S3-compatible storage for R2)
+- django-storages + boto3 (S3-compatible storage for Cloudflare R2)
 
 ### Infrastructure
 - Render (frontend + backend), Neon Postgres (prod), SQLite (local), Cloudflare R2 (media)
@@ -48,7 +49,7 @@ This repository is a **public case study** (README + screenshots). The productio
   - Calculator (`/calc`)
   - Packaging / policies / contacts / about
   - News / exclusive jewelry mini-catalog
-  - Discount program (planned / in progress if applicable)
+  - Discount program (planned)
 
 ### User flows
 - Registration + login with **email verification**
@@ -66,6 +67,7 @@ This repository is a **public case study** (README + screenshots). The productio
 ---
 
 ## Key UX modules
+
 ### 1) Catalog discovery
 The catalog is designed around fast “find what you want” flows:
 - server-driven filters (shape / cut / color + tags)
@@ -87,6 +89,7 @@ A product is the “marketing shell”, while the **variant** is what the custom
 ---
 
 ## Domain model (high-level)
+
 Catalog hierarchy:
 `StoneType → Category → SubCategory → Product → ProductVariant`
 
@@ -103,8 +106,8 @@ Supporting modules (examples):
 ## Architecture overview
 
 ### Frontend → Backend
-- Next.js consumes DRF endpoints (`NEXT_PUBLIC_API_URL`)
-- Optional dev proxy route to reduce CORS/cookie friction
+- Next.js consumes DRF endpoints (configured via environment variables in production)
+- In development, an optional proxy route can be used to reduce CORS/cookie friction
 
 ### Authentication (high-level)
 - JWT access token used for authenticated calls
@@ -113,7 +116,7 @@ Supporting modules (examples):
 
 ### Pricing (high-level)
 - Base pricing stored in **USD**
-- Checkout totals stored in **UAH** using **NBU exchange rates**
+- Checkout totals stored in **UAH** using NBU exchange rates
 - Order items store a price snapshot at purchase time for auditability
 
 ### Filtering strategy
@@ -161,7 +164,6 @@ Supporting modules (examples):
 ---
 
 ## Screenshots
-## Screenshots
 
 All screenshots are stored in the `screens/` folder.
 
@@ -197,43 +199,14 @@ All screenshots are stored in the `screens/` folder.
 ### Admin
 - `screens/admin.png`
 
-Create a folder `screens/` and add screenshots with the names below.  
-Tip: use the same device scale (browser zoom) for consistency.
-
-### Storefront (public)
-- `screens/01-home-en.png` — Home (EN): hero + curated sections
-- `screens/02-home-ua.png` — Home (UA): proof of localization
-- `screens/03-picker-zodiac.png` — Picker: zodiac flow
-- `screens/04-picker-color.png` — Picker: color palette flow
-- `screens/05-picker-shape.png` — Picker: shape/cut flow
-- `screens/06-catalog-filters.png` — Catalog: open filter panel
-- `screens/07-catalog-results.png` — Catalog: results grid/list
-- `screens/08-product-detail.png` — Product details: key blocks visible
-- `screens/09-variant-switch.png` — Product details: variant selection + pricing/currency
-
-### E-commerce flows
-- `screens/10-favorites-empty.png` — Favorites empty state (clean UX)
-- `screens/11-compare-empty.png` — Compare empty state
-- `screens/12-cart.png` — Cart view
-- `screens/13-checkout.png` — Checkout form
-- `screens/14-checkout-np.png` — Checkout: Nova Poshta city/warehouse selection (if visible)
-- `screens/15-profile.png` — Profile page
-- `screens/16-orders.png` — Orders / order history
-
-### Admin (very important for “real product” credibility)
-- `screens/17-admin-dashboard.png` — Admin dashboard overview
-- `screens/18-admin-products.png` — Admin: products list
-- `screens/19-admin-variant-edit.png` — Admin: variant edit (pricing/stock/attributes)
-- `screens/20-admin-orders.png` — Admin: orders list/detail
-- `screens/21-admin-site-settings.png` — Admin: site settings/content
-
-> If some pages contain sensitive data — blur/cover it (names, emails, addresses, IDs).
+> Tip: keep the same browser zoom/device scale for all screenshots for a consistent portfolio look.  
+> If any screen contains sensitive data (emails, addresses, IDs) — blur/cover it.
 
 ---
 
 ## Notes on privacy & security
 - Secrets and production configuration are stored in environment variables and **not** published here.
-- This repo intentionally omits private implementation details while keeping the product scope and architecture clear.
+- This repository intentionally omits private implementation details while keeping the product scope and architecture clear.
 
 ---
 
