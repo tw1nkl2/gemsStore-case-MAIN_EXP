@@ -161,6 +161,41 @@ Supporting modules (examples):
 ---
 
 ## Screenshots
+## Screenshots
+
+All screenshots are stored in the `screens/` folder.
+
+### Home
+- `screens/home1.png`
+- `screens/home2.png`
+- `screens/home3.png`
+
+### Catalog / Categories
+- `screens/cat1.png`
+- `screens/cat2.png`
+- `screens/jewCat.png` — exclusive jewelry / mini-catalog
+
+### Product details
+- `screens/details1.png`
+- `screens/details2.png`
+
+### Sale
+- `screens/sale.png`
+
+### Auth
+- `screens/login.png`
+- `screens/reg.png`
+
+### User flows
+- `screens/cart.png`
+- `screens/checkout.png`
+- `screens/fav.png`
+- `screens/compare1.png`
+- `screens/compare2.png`
+- `screens/profile.png`
+
+### Admin
+- `screens/admin.png`
 
 Create a folder `screens/` and add screenshots with the names below.  
 Tip: use the same device scale (browser zoom) for consistency.
