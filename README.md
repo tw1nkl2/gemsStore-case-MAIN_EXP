@@ -168,36 +168,36 @@ Supporting modules (examples):
 All screenshots are stored in the `screens/` folder.
 
 ### Home
-- `screens/home1.png`
-- `screens/home2.png`
-- `screens/home3.png`
+![Home 1](screens/home1.png)
+![Home 2](screens/home2.png)
+![Home 3](screens/home3.png)
 
 ### Catalog / Categories
-- `screens/cat1.png`
-- `screens/cat2.png`
-- `screens/jewCat.png` — exclusive jewelry / mini-catalog
+![Catalog 1](screens/cat1.png)
+![Catalog 2](screens/cat2.png)
+![Exclusive jewelry](screens/jewCat.png)
 
 ### Product details
-- `screens/details1.png`
-- `screens/details2.png`
+![Details 1](screens/details1.png)
+![Details 2](screens/details2.png)
 
 ### Sale
-- `screens/sale.png`
+![Sale](screens/sale.png)
 
 ### Auth
-- `screens/login.png`
-- `screens/reg.png`
+![Login](screens/login.png)
+![Register](screens/reg.png)
 
 ### User flows
-- `screens/cart.png`
-- `screens/checkout.png`
-- `screens/fav.png`
-- `screens/compare1.png`
-- `screens/compare2.png`
-- `screens/profile.png`
+![Cart](screens/cart.png)
+![Checkout](screens/checkout.png)
+![Favorites](screens/fav.png)
+![Compare 1](screens/compare1.png)
+![Compare 2](screens/compare2.png)
+![Profile](screens/profile.png)
 
 ### Admin
-- `screens/admin.png`
+![Admin](screens/admin.png)
 
 > Tip: keep the same browser zoom/device scale for all screenshots for a consistent portfolio look.  
 > If any screen contains sensitive data (emails, addresses, IDs) — blur/cover it.
